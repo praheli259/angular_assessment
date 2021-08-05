@@ -1,0 +1,21 @@
+<form #searchProductsForm="ngForm">
+  <br />
+  <div class="col-4">
+    <input
+      class="form-control form-control-sm"
+      type="text"
+      placeholder="Search..."
+      name="searchText"
+      [(ngModel)]="searchedText"
+      (ngModelChange)="getSearchedText()"
+    />
+  </div>
+  <div class="form-check">
+    <input
+      class="form-check-input"
+      type="checkbox"
+      (change)="onChange($event)"
+    />
+    <label class="form-check-label">Only show products in stock</label>
+  </div>
+</form>
